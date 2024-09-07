@@ -1,0 +1,639 @@
+html { scroll-behavior: smooth; }
+
+
+@font-face { font-family: Outline; src: url("../Media/fonts/steelfish.outline-regular.otf") format("opentype"); }
+@font-face { font-family: Regular; src: url("../Media/fonts/steelfish.eb-regular.otf") format("opentype"); }
+@font-face { font-family: ItalicS; src: url("../Media/fonts/steelfish.rg-italic.otf") format("opentype"); }
+
+:root {
+    --vadimColor: #b89393;
+    --silaColor: #869fa7;
+    --sexColor: #0d0f10;
+    --sexColor2: ;
+    --loveColor: #e14646;
+    --loveColor2: #c26565;
+    --funColor: #e5e297;
+    --funColor2: #d5d4a7;
+    --foreplayColor: #bf6976;
+    --foreplayColor2: #ae7a82;
+    --roleplayColor: #e7c1a6;
+    --roleplayColor2: #dac3b3;
+    --drinkColor: #9ad4ea;
+    --drinkColor2: #aacdda;
+    --randomColor: #d2b2f4;
+}
+
+body {
+    font-family: sans;
+    background-color: #2F2F2F;
+    color: antiquewhite;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+
+#mainContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    background-color: #2F2F2F;
+}
+
+
+#cardContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 70%;
+    height: 60%;
+}
+
+#dealCard {
+    width: 100%;
+    height: 100%;
+    perspective: 1000px;
+}
+
+.card {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    font-size: 2.2rem;
+    border-radius: 10px; 
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, .7);
+    border: 1px solid #ccc;
+    transition: transform 1s ease, opacity 1s ease;
+    /* transform: rotateX(30deg); */
+}
+
+
+
+
+.card-text {
+    position: absolute;
+    font-size: 2.7rem;
+    margin: 0;
+    top: 3%;
+    font-family: Outline;
+}
+
+.card_front {
+    background-color: #2F2F2F;
+    z-index: 2; 
+    font-family: Outline;
+    padding-left: 11px;
+    padding-right: 11px;
+    top: 0;
+    transform: translate(-11px);
+    font-size: 6rem;
+    transition: .3s ease top;
+    z-index: 4;
+}
+
+.cardFrontAnimation {
+    top: -150%;
+}
+
+.card_back {
+    text-align: center;
+    z-index: 1; 
+    font-family: Regular;
+    font-size: 2.2rem; 
+    padding-left: 10px;
+    padding-right: 10px;
+    transform: translate(-10px);
+    transition: .3s ease top;
+    z-index: 2;
+
+/* card-sex SEX CARD SEXCARD CARDSEX */
+    background-color: var(--sexColor);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-y: 95%;
+    color: white;
+}
+
+.cardBackAnimation {
+    top: 150%;
+}
+
+.cardBackOverlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, .7);
+    border: 1px solid #ccc;
+    transition: .3s ease top, background-color .3s ease;
+    background-color: rgb(146, 145, 145);
+    transform: translate(-10px);
+    padding-left: 10px;
+    padding-right: 10px;
+    z-index: 1;
+    background-image: url(../Media/img/cardsWhite.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;   
+}
+
+.cardBackOverlayShow {
+    top: 150%;
+    z-index: 3;
+    background-color: #202020;
+}
+
+.random_card_front {
+    position: absolute;
+    width: 100%;
+    height: 160%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotateY(270deg);
+    background-color: #7f04a8;
+    background-color: var(--randomColor);
+    transition: 1s ease all;
+    padding: 30px;
+    border: 1px solid #ccc; 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    text-align: center; 
+    font-family: Outline;
+    background-image: url("../Media/img/lucky.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 4000;
+}
+
+.randomCardFrontShow {
+    position: absolute;
+    width: 100%;
+    height: 160%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotateY(0deg);
+    transition: 1s ease all;
+    z-index: 199999;
+}
+
+.randomCardFrontHide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotateY(-90deg); /* Rotate to hide */
+    transition: transform 1s ease;
+    z-index: 199999;
+}
+
+.random_card_heading {
+    font-size: 3rem;
+    font-weight: bold; 
+    color: rgb(0, 0, 0);
+    font-family: Outline;
+    z-index: 4001;
+    color: #cc51f5; 
+}
+
+.random_card_text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5rem; 
+    font-family: Regular;
+    line-height: 1.5; 
+    color: rgb(212, 212, 212);
+}
+
+
+
+
+
+
+.player_1_BG {
+    position: absolute;
+    top: 0;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 0, 0);
+    background-color: var(--vadimColor);
+    clip-path: polygon(0 0, 30% 0, 55% 100%, 0% 100%);
+    transition: .4s ease all;
+}
+
+.player1BGHide {
+    left: -100%;
+    transition: .4s ease all;
+}
+
+.player_2_BG {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 4, 255);
+    background-color: var(--silaColor);
+    clip-path: polygon(70% 0, 100% 0, 100% 100%, 45% 100%);
+    transition: .4s ease all;
+}
+
+.player2BGShow {
+    left: 0%;
+    transition: .4s ease all;
+}
+
+
+.player_turn_display {
+    display: flex;
+    position: absolute;
+    top: 7vh;
+    left: 17%;
+    width: 30%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    font-weight: bold;
+    z-index: 300;
+    font-family: ItalicS;
+    font-size: 3rem;
+    transition: .4s ease all;
+}
+
+.player_turn_display_s {
+    left: 90%;
+}
+
+
+
+#jokerContainer {
+    position: absolute;
+    top: 93%;
+    left: 0%;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    
+    font-size: 20px;
+    font-weight: bold;
+    z-index: 300;
+    font-family: ItalicS;
+    font-size: 3rem;
+
+}
+
+.player1Jokers {
+    position: absolute;
+    bottom: 10%;
+    left: -50%;
+    transition: .5s ease left;
+}
+
+.player2Jokers {
+    position: absolute;
+    bottom: 10%;
+    right: -50%;
+    transition: .5s ease right;
+}
+
+.player1JokersShow {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+
+}
+
+.player2JokersShow {
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+}
+
+
+
+.jokerButton {
+    position: absolute;
+    bottom: -20%;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: rgba(0, 4, 255);
+    background-color: var(--vadimColor);
+    color: #202020;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 2rem;
+    font-family: ItalicS;
+    z-index: 300;
+    transition: all .2s ease;
+    box-shadow: 0px 0px 10px white;
+}
+
+.jokerButtonHide {
+    bottom: 7%;
+    transition: all .5s ease;
+}
+
+.jokerButton_p2 {
+    background-color: rgb(196, 72, 72);
+    background-color: var(--silaColor);
+}
+
+.jokerMessage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%) rotateY(90deg);
+    background-color: yellow;
+    border-radius: 10px;
+    color: black;
+    
+    font-size: 5rem;
+    font-family: Regular;
+    text-align: center;
+    padding: 15px;
+
+    z-index: 1000;
+    transition: 1s ease all;
+}
+
+.jokerMessageShow {
+    transform: translate(-50%, -50%) rotateY(0);
+}
+
+
+
+
+
+.counter_display {
+display: flex;
+text-align: center;
+justify-content: center;
+position: absolute;
+top: 5%;
+left: 50%;
+width: 100%;
+transform: translate(-50%, -50%);
+z-index: 300;
+font-family: ItalicS;
+font-size: 1.5rem;
+box-shadow: 0px 0px 10px white;
+}
+
+
+
+
+.card-love .card_front,
+.card-foreplay .card_front,
+.card-sex .card_front,
+.card-roleplay .card_front,
+.card-foreplay .card_front,
+.card-drink .card_front,
+.card-fun .card_front {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.card-love .card_front {
+    background-color: var(--loveColor);
+    color: white;
+    border: 2px solid red;
+    background-image: url("../Media/img/love.png");
+}
+
+
+.card-foreplay .card_front {
+    background-color: var(--foreplayColor);
+    color: white;
+    border: 2px solid white;
+    background-image: url("../Media/img/foreplay.png");
+}
+
+.card-sex .card_front {
+    background-color: var(--sexColor);
+    color: rgb(220, 0, 0);
+    border: 2px solid white;
+    background-image: url("../Media/img/sex.png");
+    background-size: 80%;
+}
+
+.card-roleplay .card_front {
+    background-color: var(--roleplayColor);
+    color: white;
+    border: 2px solid rgb(255, 255, 255);;
+    background-image: url("../Media/img/roleplay.png");
+
+}
+
+.card-drink .card_front {
+    background-color: lightblue;
+    background-color: var(--drinkColor);
+    color: white;
+    border: 2px solid white;
+    background-image: url("../Media/img/drink.png");
+}
+
+.card-fun .card_front {
+    background-color: yellow;
+    background-color: var(--funColor);
+    color: white;
+    border: 2px solid white;;
+    background-image: url("../Media/img/fun.png");
+}
+
+
+/* 12 Love */
+.card-love-1 .card_back,
+.card-love-2 .card_back,
+.card-love-3 .card_back,
+.card-love-4 .card_back,
+.card-love-5 .card_back,
+.card-love-6 .card_back,
+.card-love-7 .card_back,
+.card-love-8 .card_back,
+.card-love-9 .card_back,
+.card-love-10 .card_back,
+.card-love-11 .card_back,
+.card-love-12 .card_back {
+    background-color: var(--loveColor2);
+    color: white;
+    font-style: italic;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-y: 95%;
+}
+
+.card-love-1 .card_back {
+    background-image: url("../Media/img/one-shot.png");
+}
+
+.card-love-2 .card_back {
+    background-image: url("../Media/img/one-shot.png");
+}
+
+/* 31 Foreplay */
+.card-foreplay-1 .card_back,
+.card-foreplay-2 .card_back,
+.card-foreplay-3 .card_back,
+.card-foreplay-4 .card_back,
+.card-foreplay-5 .card_back,
+.card-foreplay-6 .card_back,
+.card-foreplay-7 .card_back,
+.card-foreplay-8 .card_back,
+.card-foreplay-9 .card_back,
+.card-foreplay-10 .card_back,
+.card-foreplay-11 .card_back,
+.card-foreplay-12 .card_back,
+.card-foreplay-13 .card_back,
+.card-foreplay-14 .card_back,
+.card-foreplay-15 .card_back,
+.card-foreplay-16 .card_back,
+.card-foreplay-17 .card_back,
+.card-foreplay-18 .card_back,
+.card-foreplay-19 .card_back,
+.card-foreplay-20 .card_back,
+.card-foreplay-21 .card_back,
+.card-foreplay-22 .card_back,
+.card-foreplay-23 .card_back,
+.card-foreplay-24 .card_back,
+.card-foreplay-25 .card_back,
+.card-foreplay-26 .card_back,
+.card-foreplay-27 .card_back,
+.card-foreplay-28 .card_back,
+.card-foreplay-29 .card_back,
+.card-foreplay-30 .card_back,
+.card-foreplay-31 .card_back {
+    background-color: var(--foreplayColor2);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-y: 95%;
+    color: white;
+}
+
+.card-foreplay-1 .card_back {
+    background-image: url(../Media/img/one-shot.png);
+}
+
+/* 4 Roleplay */
+.card-roleplay-1 .card_back,
+.card-roleplay-2 .card_back,
+.card-roleplay-3 .card_back,
+.card-roleplay-4 .card_back {
+    background-color: var(--roleplayColor2);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-y: 95%;
+    color: white;
+}
+
+
+/* 14 Sex */
+.cardsex-1 .card_back,
+.cardsex-2 .card_back,
+.cardsex-3 .card_back,
+.cardsex-4 .card_back,
+.cardsex-5 .card_back,
+.cardsex-6 .card_back,
+.cardsex-7 .card_back,
+.cardsex-8 .card_back,
+.cardsex-9 .card_back,
+.cardsex-10 .card_back,
+.cardsex-11 .card_back,
+.cardsex-12 .card_back,
+.cardsex-13 .card_back,
+.cardsex-14 .card_back {
+    background-color: var(--sexColor);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-y: 95%;
+    color: white;
+}
+
+.card-foreplay-2 .card_back {
+    background-image: url(../Media/img/one-shot.png);
+}
+
+/* 5 Drink */
+.card-drink-1 .card_back,
+.card-drink-2 .card_back,
+.card-drink-3 .card_back,
+.card-drink-4 .card_back,
+.card-drink-5 .card_back,
+.card-drink-6 .card_back {
+    background-color: var(--drinkColor2);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-y: 95%;
+    color: white;
+}
+
+
+/* 20 Fun */
+.card-fun-1 .card_back,
+.card-fun-2 .card_back,
+.card-fun-3 .card_back,
+.card-fun-4 .card_back,
+.card-fun-5 .card_back,
+.card-fun-6 .card_back,
+.card-fun-7 .card_back,
+.card-fun-8 .card_back,
+.card-fun-9 .card_back,
+.card-fun-10 .card_back,
+.card-fun-11 .card_back,
+.card-fun-12 .card_back,
+.card-fun-13 .card_back,
+.card-fun-14 .card_back,
+.card-fun-15 .card_back,
+.card-fun-16 .card_back,
+.card-fun-17 .card_back,
+.card-fun-18 .card_back,
+.card-fun-19 .card_back,
+.card-fun-20 .card_back {
+    background-color: var(--funColor2);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-y: 95%;
+    color: white;
+}

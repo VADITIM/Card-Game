@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Card Game</title>
+    <link rel="stylesheet" href="../Card Game/Style/Style.css" />
+    <script type="module" src="../Card Game/Script/Script.js" defer></script>
+</head>
+<body>
+
+  <div id="playerTurn" class="player_turn_display"></div>
+  
+  <div id="jokerContainer">
+      <div id="player1Jokers" class="player1Jokers">Player 1 Jokers: 3</div>
+      <div id="player2Jokers" class="player2Jokers">Player 2 Jokers: 3</div>
+  </div>
+  <button id="useJokerButton" class="jokerButton">Use Joker</button>
+
+    <div id="mainContainer">
+      <div class="player_1_BG"></div>
+      <div class="player_2_BG"></div>
+
+      <div id="counter" class="counter_display">Cards left: 0</div>
+
+        <div id="cardContainer">
+          <div class="random_card">
+            <div class="random_card_front">
+                BONUS
+            </div>
+            <div class="random_card_back"></div>
+        <div class="jokerMessage"></div> <!-- Container for joker usage message -->
+
+        </div>
+
+            <div id="dealCard" class="card_display">
+                <div class="card card_front">
+                    <div class="card_heading"></div>
+                </div>
+                <div class="card card_back">
+                    <div class="card_text"></div>
+                </div>
+                <div class="cardBackOverlay"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
