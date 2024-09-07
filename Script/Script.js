@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function randomCardChance() {
-        return Math.random() < 0.95; 
+        return Math.random() < 0.05; 
     }
 
     function displayRandomCard() {

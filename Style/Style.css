@@ -11,15 +11,15 @@ html { scroll-behavior: smooth; }
     --sexColor: #0d0f10;
     --sexColor2: ;
     --loveColor: #e14646;
-    --loveColor2: #c26565;
+    --loveColor2: #663636;
     --funColor: #e5e297;
-    --funColor2: #d5d4a7;
+    --funColor2: #86856a;
     --foreplayColor: #bf6976;
-    --foreplayColor2: #ae7a82;
+    --foreplayColor2: #6b4c50;
     --roleplayColor: #e7c1a6;
-    --roleplayColor2: #dac3b3;
+    --roleplayColor2: #887b72;
     --drinkColor: #9ad4ea;
-    --drinkColor2: #aacdda;
+    --drinkColor2: #576b72;
     --randomColor: #d2b2f4;
 }
 
@@ -80,22 +80,11 @@ body {
 }
 
 
-
-
-.card-text {
-    position: absolute;
-    font-size: 2.7rem;
-    margin: 0;
-    top: 3%;
-    font-family: Outline;
-}
-
 .card_front {
     background-color: #2F2F2F;
     z-index: 2; 
     font-family: Outline;
-    padding-left: 11px;
-    padding-right: 11px;
+    padding: 11px;
     top: 0;
     transform: translate(-11px);
     font-size: 6rem;
@@ -109,17 +98,22 @@ body {
 
 .card_back {
     text-align: center;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
     z-index: 1; 
+    line-height: 1;
     font-family: Regular;
     font-size: 2.2rem; 
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 10px;
     transform: translate(-10px);
+    top: 0;
     transition: .3s ease top;
     z-index: 2;
+    white-space: pre-line; /* Preserves line breaks */
 
 /* card-sex SEX CARD SEXCARD CARDSEX */
-    background-color: var(--sexColor);
+    background-color: #252525;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -171,7 +165,6 @@ body {
     left: 50%;
     transform: translate(-50%, -50%) rotateY(270deg);
     background-color: #7f04a8;
-    background-color: var(--randomColor);
     transition: 1s ease all;
     padding: 30px;
     border: 1px solid #ccc; 
@@ -211,11 +204,10 @@ body {
 
 .random_card_heading {
     font-size: 3rem;
-    font-weight: bold; 
     color: rgb(0, 0, 0);
     font-family: Outline;
     z-index: 4001;
-    color: #cc51f5; 
+    color: #ff9600; 
 }
 
 .random_card_text {
@@ -304,7 +296,6 @@ body {
     z-index: 300;
     font-family: ItalicS;
     font-size: 3rem;
-
 }
 
 .player1Jokers {
@@ -381,7 +372,7 @@ body {
     font-size: 5rem;
     font-family: Regular;
     text-align: center;
-    padding: 15px;
+    padding: 25px;
 
     z-index: 1000;
     transition: 1s ease all;
@@ -488,7 +479,6 @@ box-shadow: 0px 0px 10px white;
 .card-love-12 .card_back {
     background-color: var(--loveColor2);
     color: white;
-    font-style: italic;
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -500,6 +490,46 @@ box-shadow: 0px 0px 10px white;
 }
 
 .card-love-2 .card_back {
+    background-image: url("../Media/img/two-shot.png");
+}
+
+.card-love-3 .card_back {
+    background-image: url("../Media/img/one-shot.png");
+}
+
+.card-love-4 .card_back {
+    background-image: url("../Media/img/two-shot.png");
+}
+
+.card-love-5 .card_back {
+    background-image: url("../Media/img/two-shot.png");
+}
+
+.card-love-6 .card_back {
+    background-image: url("../Media/img/one-shot.png");
+}
+
+.card-love-7 .card_back {
+    background-image: url("../Media/img/two-shot.png");
+}
+
+.card-love-8 .card_back {
+    background-image: url("../Media/img/one-shot.png");
+}
+
+.card-love-9 .card_back {
+    background-image: url("../Media/img/one-shot.png");
+}
+
+.card-love-10 .card_back {
+    background-image: url("../Media/img/two-shot.png");
+}
+
+.card-love-11 .card_back {
+    background-image: url("../Media/img/one-shot.png");
+}
+
+.card-love-12 .card_back {
     background-image: url("../Media/img/one-shot.png");
 }
 
@@ -548,6 +578,126 @@ box-shadow: 0px 0px 10px white;
     background-image: url(../Media/img/one-shot.png);
 }
 
+.card-foreplay-2 .card_back {
+    background-image: url(../Media/img/two-shot.png);
+}
+
+.card-foreplay-3 .card_back {
+    background-image: url(../Media/img/one-shot.png);
+}
+
+.card-foreplay-4 .card_back {
+    background-image: url(../Media/img/two-shot.png);
+}
+
+.card-foreplay-5 .card_back {
+    background-image: url(../Media/img/one-shot.png);
+}
+
+.card-foreplay-6 .card_back {
+    background-image: url(../Media/img/one-shot.png);
+}
+
+.card-foreplay-7 .card_back {
+    background-image: url(../Media/img/two-shot.png);
+}
+
+.card-foreplay-8 .card_back {
+    background-image: url(../Media/img/two-shot.png);
+}
+
+.card-foreplay-9 .card_back {
+    background-image: url(../Media/img/three-shot.png);
+}
+
+.card-foreplay-10 .card_back {
+    background-image: url(../Media/img/one-shot.png);
+}
+
+.card-foreplay-11 .card_back {
+    background-image: url(../Media/img/two-shot.png);
+}
+
+.card-foreplay-12 .card_back {
+    background-image: url(../Media/img/one-shot.png);
+}
+
+.card-foreplay-13 .card_back {
+    background-image: url(../Media/img/two-shot.png);
+}
+
+.card-foreplay-14 .card_back {
+    background-image: url(../Media/img/three-shot.png);
+}
+
+.card-foreplay-15 .card_back {
+    background-image: url(../Media/img/one-shot.png);
+}
+
+.card-foreplay-16 .card_back {
+    background-image: url(../Media/img/three-shot.png);
+}
+
+.card-foreplay-17 .card_back {
+    background-image: url(../Media/img/one-shot.png);
+}
+
+.card-foreplay-18 .card_back {
+    background-image: url(../Media/img/two-shot.png);
+}
+
+.card-foreplay-19 .card_back {
+    background-image: url(../Media/img/one-shot.png);
+}
+
+.card-foreplay-20 .card_back {
+    background-image: url(../Media/img/one-shot.png);
+}
+
+.card-foreplay-21 .card_back {
+    background-image: url(../Media/img/two-shot.png);
+}
+
+.card-foreplay-22 .card_back {
+    background-image: url(../Media/img/two-shot.png);
+}
+
+.card-foreplay-23 .card_back {
+    background-image: url(../Media/img/two-shot.png);
+}
+
+.card-foreplay-24.card_back {
+    background-image: url(../Media/img/two-shot.png);
+}
+
+.card-foreplay-25 .card_back {
+    background-image: url(../Media/img/one-shot.png);
+}
+
+.card-foreplay-26 .card_back {
+    background-image: url(../Media/img/one-shot.png);
+}
+
+.card-foreplay-27 .card_back {
+    background-image: url(../Media/img/three-shot.png);
+}
+
+.card-foreplay-28 .card_back {
+    background-image: url(../Media/img/one-shot.png);
+}
+
+.card-foreplay-29 .card_back {
+    background-image: url(../Media/img/twp-shot.png);
+}
+
+.card-foreplay-30 .card_back {
+    background-image: url(../Media/img/three-shot.png);
+}
+
+.card-foreplay-31 .card_back {
+    background-image: url(../Media/img/one-shot.png);
+}
+
 /* 4 Roleplay */
 .card-roleplay-1 .card_back,
 .card-roleplay-2 .card_back,
@@ -561,6 +711,23 @@ box-shadow: 0px 0px 10px white;
     background-position-y: 95%;
     color: white;
 }
+
+.card-roleplay-1 .card_back {
+    background-image: url(../Media/img/one-shot.png);
+}
+
+.card-roleplay-2 .card_back {
+    background-image: url(../Media/img/two-shot.png);
+}
+
+.card-roleplay-3 .card_back {
+    background-image: url(../Media/img/three-shot.png);
+}
+
+.card-roleplay-4 .card_back {
+    background-image: url(../Media/img/one-shot.png);
+}
+
 
 
 /* 14 Sex */
@@ -578,7 +745,7 @@ box-shadow: 0px 0px 10px white;
 .cardsex-12 .card_back,
 .cardsex-13 .card_back,
 .cardsex-14 .card_back {
-    background-color: var(--sexColor);
+    background-color: #717171;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -587,7 +754,59 @@ box-shadow: 0px 0px 10px white;
     color: white;
 }
 
-.card-foreplay-2 .card_back {
+.card-sex-1 .card_back {
+    background-image: url(../Media/img/two-shot.png);
+}
+
+.card-sex-2 .card_back {
+    background-image: url(../Media/img/three-shot.png);
+}
+
+.card-sex-3 .card_back {
+    background-image: url(../Media/img/one-shot.png);
+}
+
+.card-sex-4 .card_back {
+    background-image: url(../Media/img/three-shot.png);
+}
+
+.card-sex-5 .card_back {
+    background-image: url(../Media/img/three-shot.png);
+}
+
+.card-sex-6 .card_back {
+    background-image: url(../Media/img/two-shot.png);
+}
+
+.card-sex-7 .card_back {
+    background-image: url(../Media/img/two-shot.png);
+}
+
+.card-sex-8 .card_back {
+    background-image: url(../Media/img/three-shot.png);
+}
+
+.card-sex-9 .card_back {
+    background-image: url(../Media/img/two-shot.png);
+}
+
+.card-sex-10 .card_back {
+    background-image: url(../Media/img/two-shot.png);
+}
+
+.card-sex-11 .card_back {
+    background-image: url(../Media/img/three-shot.png);
+}
+
+.card-sex-12 .card_back {
+    background-image: url(../Media/img/two-shot.png);
+}
+
+.card-sex-13 .card_back {
+    background-image: url(../Media/img/three-shot.png);
+}
+
+.card-sex-14 .card_back {
     background-image: url(../Media/img/one-shot.png);
 }
 
@@ -596,8 +815,7 @@ box-shadow: 0px 0px 10px white;
 .card-drink-2 .card_back,
 .card-drink-3 .card_back,
 .card-drink-4 .card_back,
-.card-drink-5 .card_back,
-.card-drink-6 .card_back {
+.card-drink-5 .card_back {
     background-color: var(--drinkColor2);
     background-size: cover;
     background-position: center;
@@ -606,6 +824,24 @@ box-shadow: 0px 0px 10px white;
     background-position-y: 95%;
     color: white;
 }
+
+.card-drink-1 .card_back {
+}
+
+.card-drink-2 .card_back {
+    background-image: url(../Media/img/one-shot.png);
+}
+
+.card-drink-3 .card_back {
+    background-image: url(../Media/img/two-shot.png);
+}
+
+.card-drink-4 .card_back {
+}
+
+.card-drink-5 .card_back {
+}
+
 
 
 /* 20 Fun */
@@ -636,4 +872,99 @@ box-shadow: 0px 0px 10px white;
     background-size: contain;
     background-position-y: 95%;
     color: white;
+}
+
+.card-fun-1 .card_back {
+    background-image: url(../Media/img/two-shot.png);
+}
+
+.card-fun-2 .card_back {
+    background-image: url(../Media/img/one-shot.png);
+}
+
+.card-fun-3 .card_back {
+    background-image: url(../Media/img/two-shot.png);
+}
+
+.card-fun-4 .card_back {
+    background-image: url(../Media/img/two-shot.png);
+}
+
+.card-fun-5 .card_back {
+    background-image: url(../Media/img/one-shot.png);
+}
+
+.card-fun-6 .card_back {
+    background-image: url(../Media/img/one-shot.png);
+}
+
+.card-fun-7 .card_back {
+    background-image: url(../Media/img/two-shot.png);
+}
+
+.card-fun-8 .card_back {
+    background-image: url(../Media/img/one-shot.png);
+}
+
+.card-fun-9 .card_back {
+    background-image: url(../Media/img/one-shot.png);
+}
+
+.card-fun-10 .card_back {
+    background-image: url(../Media/img/one-shot.png);
+}
+
+.card-fun-11 .card_back {
+    background-image: url(../Media/img/one-shot.png);
+}
+
+.card-fun-12 .card_back {
+    background-image: url(../Media/img/two-shot.png);
+}
+
+.card-fun-13 .card_back {
+    background-image: url(../Media/img/two-shot.png);
+}
+
+.card-fun-14 .card_back {
+    background-image: url(../Media/img/one-shot.png);
+}
+
+.card-fun-15 .card_back {
+    background-image: url(../Media/img/two-shot.png);
+}
+
+.card-fun-16 .card_back {
+    background-image: url(../Media/img/three-shot.png);
+}
+
+.card-fun-17 .card_back {
+    background-image: url(../Media/img/one-shot.png);
+}
+
+.card-fun-18 .card_back {
+    background-image: url(../Media/img/two-shot.png);
+}
+
+.card-fun-19 .card_back {
+    background-image: url(../Media/img/one-shot.png);
+}
+
+.card-fun-20 .card_back {
+    background-image: url(../Media/img/one-shot.png);
+}
+
+
+
+
+.card-text {
+    position: absolute;
+    display: flex;
+    font-size: 2.7rem;
+    margin: 0;
+    top: 3%;
+    z-index: 3000000;
+    font-family: Outline;
+    background-color: black;
+
 }
