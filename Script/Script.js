@@ -11,6 +11,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let player1Name = "Vaduna";
     let player2Name = "my bebe";
+    function vibrate() {
+        if (navigator.vibrate) {
+            navigator.vibrate([100]);
+            console.log("vibrate big");
+        } else {
+            console.log("Vibration API not supported");
+        }
+    }
+    function vibrateSmall() {
+        navigator.vibrate([100, 50 ,50]);
+        console.log("vibrate small");
+    }
+
+    function vibrateRandom()
+    {
+        navigator.vibrate([100, 50, 100, 50, 100]);
+        console.log("vibrate random");
+    }
+
 
     function combineDecks(decks) {
         let combinedDeck = [];
@@ -60,7 +79,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
             jokers.classList.remove('jokerButton_p2');
 
-        } else {
+        } 
+        else 
+        {
             player1BG.classList.add('player1BGHide');
             player2BG.classList.add('player2BGShow');
 
@@ -70,7 +91,6 @@ document.addEventListener('DOMContentLoaded', () => {
             player2Jokers.classList.add('player2JokersShow');
 
             jokers.classList.add('jokerButton_p2');
-
         }
     }
     
@@ -149,7 +169,9 @@ document.addEventListener('DOMContentLoaded', () => {
         
     function handleCardClick() {
         if (!canClickMainCard) return; // Prevent card clicks if random card is active
-    
+
+        vibrate();
+        
         const cardFront = document.querySelector('.card_front');
         const cardBack = document.querySelector(".card_back");
         const cardBackOverlay = document.querySelector(".cardBackOverlay");
@@ -170,6 +192,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (currentCardIndex < shuffledDeck.length) {
                 if (randomCardChance()) {
                     displayRandomCard(); 
+                    vibrateRandom();
                 } else {
                     displayCard(currentCardIndex); // Show the next regular card immediately
                 }
@@ -183,7 +206,9 @@ document.addEventListener('DOMContentLoaded', () => {
         
     function useJoker() {
         const jokerMessage = document.querySelector(".jokerMessage");
-    
+        
+        vibrateSmall();
+
         if (currentPlayer === 1 && player1Jokers > 0) {
             player1Jokers--;
             updateJokers();
