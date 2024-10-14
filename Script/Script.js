@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let canClickMainCard = true; // Flag to control main card clicks
 
     let player1Name = "Vaduna";
-    let player2Name = "my bebe";
+    let player2Name = "Sia";
     function vibrate() {
         if (navigator.vibrate) {
             navigator.vibrate([100]);

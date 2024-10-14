@@ -92,7 +92,8 @@ export const decks = {
         { id: 'fun-17', heading: 'Fun', text: 'Picture Perfect\n\nMake a picture together.', rating: 1 },
         { id: 'fun-18', heading: 'Fun', text: 'Love Mark\n\nMark your partner’s belly with your lips with waterproof lipstick.', rating: 1 },
         { id: 'fun-19', heading: 'Fun', text: 'Sexy Overhaul\n\nAsk your partner to go outside the room and dress yourself in something sexy to surprise them.', rating: 2 },
-        { id: 'fun-20', heading: 'Fun', text: 'Tickle & Tease\n\nAlternate between gentle tickles and sensual touches for two minutes.', rating: 1 }
+        { id: 'fun-20', heading: 'Fun', text: 'Tickle & Tease\n\nAlternate between gentle tickles and sensual touches for two minutes.', rating: 1 },
+        { id: 'fun-21', heading: 'Fun', text: 'Sensual Essence\n\nSpray your favourite perfume on your partner.', rating: 1 }
     ]
 };
 export const randomCards = [

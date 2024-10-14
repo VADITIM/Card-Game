@@ -266,19 +266,21 @@ body {
     display: flex;
     position: absolute;
     top: 7vh;
-    left: 17%;
-    width: 30%;
+    left: 15%;
+    width: 7rem;
+    justify-content: center;
     transform: translateX(-50%);
     font-size: 24px;
     font-weight: bold;
     z-index: 300;
-    font-family: ItalicS;
+    font-family: Italics;
     font-size: 3rem;
     transition: .4s ease all;
 }
 
 .player_turn_display_s {
     left: 90%;
+    width: 4rem;
 }
 
 
@@ -687,7 +689,7 @@ box-shadow: 0px 0px 10px white;
 }
 
 .card-foreplay-29 .card_back {
-    background-image: url(../Media/img/twp-shot.png);
+    background-image: url(../Media/img/two-shot.png);
 }
 
 .card-foreplay-30 .card_back {
@@ -954,8 +956,9 @@ box-shadow: 0px 0px 10px white;
     background-image: url(../Media/img/one-shot.png);
 }
 
-
-
+.card-fun-21 .card_back {
+    background-image: url(../Media/img/one-shot.png);
+}
 
 .card-text {
     position: absolute;
