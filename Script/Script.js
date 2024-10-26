@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let player2Name = "Sia";
     
     function randomCardChance() {
-        return Math.random() < 0.05; 
+        return Math.random() < 0.061; 
     }
 
     function shuffleDeck(deck) {
@@ -43,7 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         return finalDeck;
     }
-
     
     function combineDecks(decks) {
         let combinedDeck = [];
@@ -98,6 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const randomCard = randomCards[Math.floor(Math.random() * randomCards.length)];
         const randomCardFront = document.querySelector('.random_card_front');
         const randomCardBack = document.querySelector('.random_card_back');
+        const jokerContainer = document.getElementById('jokerContainer');
     
         if (randomCardFront && randomCardBack) {
             randomCardFront.innerHTML = `
@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
             randomCardBack.innerHTML = ''; 
     
             randomCardFront.classList.add('randomCardFrontShow');
-            // console.log("Random card displayed.");
+            jokerContainer.style.zIndex = "0";
     
             canClickMainCard = false;
     
@@ -122,11 +122,12 @@ document.addEventListener('DOMContentLoaded', () => {
     function resetRandomCard() {
         const randomCardFront = document.querySelector('.random_card_front');
         const randomCardBack = document.querySelector('.random_card_back');
+        const jokerContainer = document.getElementById('jokerContainer');
 
         if (randomCardFront && randomCardBack) {
             randomCardFront.classList.remove('randomCardFrontShow', 'randomCardFrontHide');
             randomCardBack.classList.remove('randomCardBackShow');
-            // console.log("Random card reset.");
+            jokerContainer.style.zIndex = "300";
         }
     }
 
@@ -157,7 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function handleCardClick() {
         if (!canClickMainCard) return; 
 
-        vibrate();
+        vibrateSmall();
         
         const cardFront = document.querySelector('.card_front');
         const cardBack = document.querySelector(".card_back");
@@ -237,12 +238,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 2000); 
     }
                 
-    function vibrate() {
-        navigator.vibrate([100]);
-    }
 
     function vibrateSmall() {
-        navigator.vibrate([100, 50 ,50]);
+        navigator.vibrate(10);
     }
 
     function vibrateRandom()
@@ -260,4 +258,5 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('useJokerButton').addEventListener('click', useJoker);
     }
     init();
+
 });

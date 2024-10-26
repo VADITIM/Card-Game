@@ -1,4 +1,3 @@
-// Define the decks
 export const decks = {
     love: [
         { id: 'love-1', heading: 'Love', text: 'Sweet Kisses\n\n Kiss your partner gently and slowly, expressing your love with each kiss for a minute.', rating: 1 },
@@ -13,8 +12,9 @@ export const decks = {
         { id: 'love-10', heading: 'Love', text: 'Lotus Embrace\n\nYou both drink and sit within the lotus position and just love each other for three minutes. <3', rating: 2 },
         { id: 'love-11', heading: 'Love', text: 'Kiss of Love\n\n Stroke your partner’s lips, tell them how much you love them and give them a deep kiss.', rating: 2 },
     ],
+
     foreplay: [
-        { id: 'foreplay-1', heading: 'Foreplay', text: 'Whispering Desire\n\n Talk dirty in your native language for a minute.', rating: 1 },
+        { id: 'foreplay-1', heading: 'Foreplay', text: 'Whispering Desire I\n\n Talk dirty in your native language for a minute.', rating: 1 },
         { id: 'foreplay-2', heading: 'Foreplay', text: 'Pinned Passion\n\n Pin your partner into the bed and start making out for a minute.', rating: 2 },
         { id: 'foreplay-3', heading: 'Foreplay', text: 'Toy Tease\n\n Stimulate your partner with a toy or yourself for a minute.', rating: 2 },
         { id: 'foreplay-4', heading: 'Foreplay', text: 'Bondage Bliss\n\n Tie your partner to lightly restrain them, giving you control over their pleasure for three minutes. (No fucking, teasing allowed)', rating: 3 },
@@ -22,7 +22,7 @@ export const decks = {
         { id: 'foreplay-6', heading: 'Foreplay', text: 'Blindfold Sensory\n\n Blindfold your partner and start teasing them in any way for one and a half minutes.', rating: 2 },
         { id: 'foreplay-7', heading: 'Foreplay', text: 'Loving Restraint\n\n Tie your partner’s hands gently and shower them with affection while they are restrained for three minutes.', rating: 2 },
         { id: 'foreplay-8', heading: 'Foreplay', text: 'Hidden Heat\n\n Put your hand down your partner’s underwear and do whatever you want for three minutes.', rating: 3 },
-        { id: 'foreplay-9', heading: 'Foreplay', text: 'Moan Tease\n\n Blindfold your partner and tease them for so long until their first moan.', rating: 2 },
+        { id: 'foreplay-9', heading: 'Foreplay', text: 'Moan Tease\n\n Blindfold your partner and teaseor pleasure them for so long until their first moan.', rating: 2 },
         { id: 'foreplay-10', heading: 'Foreplay', text: 'Strawberry Seduction\n\n Lick your partner’s nipple or eat them with strawberry for a minute.', rating: 1 },
         { id: 'foreplay-11', heading: 'Foreplay', text: 'Choke & Kiss\n\n Pin your partner down and choke them while teasing them with kisses for two minutes.', rating: 3 },
         { id: 'foreplay-12', heading: 'Foreplay', text: 'Lap Lock\n\n Sit on your partner’s lap and kiss each other for a minute.', rating: 1 },
@@ -42,9 +42,11 @@ export const decks = {
         { id: 'foreplay-26', heading: 'Foreplay', text: 'Lip Bite\n\n Bite and kiss your partner’s lips for a time.', rating: 1 },
         { id: 'foreplay-27', heading: 'Foreplay', text: 'Hickey Time\n\n Draw your partner closely and kiss their neck intensely for two minutes.', rating: 2 },
         { id: 'foreplay-28', heading: 'Foreplay', text: 'Under Pleasure Control\n\n You choose every action your partner must perform on you, but you cannot touch them for two minutes.', rating: 2 },
-        { id: 'foreplay-29', heading: 'Foreplay', text: 'Undercover Kisses\n\n Kiss your partner’s body under the covers for two minutes.', rating: 2 },
-        { id: 'foreplay-30', heading: 'Foreplay', text: 'Whispering Desire\n\n Talk dirty in your native language for a minute.', rating: 1 },
+        { id: 'foreplay-29', heading: 'Foreplay', text: 'Undercover Kisses\n\n Kiss your partner’s body under the covers for two minutes and surprise them with a short head inbetween.', rating: 2 },
+        { id: 'foreplay-30', heading: 'Foreplay', text: 'Whispering Desire II\n\n Talk dirty in your native language for a minute.', rating: 1 },
+        { id: 'foreplay-30', heading: 'Foreplay', text: 'Lap Dance\n\n Give your partner a sexy lap dance and incorperate gentles kisses for a minute.', rating: 1 },
     ],
+
     sex: [
         { id: 'sex-1', heading: 'Sex', text: 'Tied Heaven\n\nBlindfold your partner, tie their hands and / or legs and fuck them as you please for four minutes.', rating: 3 },
         { id: 'sex-2', heading: 'Sex', text: 'Position Of The Night\n\nTry a new sex position for two minutes.', rating: 1 },
@@ -64,9 +66,9 @@ export const decks = {
 
     drink: [
         { id: 'drink-1', heading: 'Drink', text: 'Anniversary Sip\n\nTake a drink for each year you have been together.' },
-        { id: 'drink-2', heading: 'Drink', text: 'Body Shots\n\nTake a shot off your partner’s body.', rating: 1 },
-        { id: 'drink-2', heading: 'Drink', text: 'Body Shots\n\nTake a shot off your partner’s body.', rating: 1 },
-        { id: 'drink-2', heading: 'Drink', text: 'Body Shots\n\nTake a shot off your partner’s body.', rating: 1 },
+        { id: 'drink-2', heading: 'Drink', text: 'Body Shots I\n\nTake a shot off your partner’s body.', rating: 1 },
+        { id: 'drink-2', heading: 'Drink', text: 'Body Shots II\n\nTake a shot off your partner’s body.', rating: 1 },
+        { id: 'drink-2', heading: 'Drink', text: 'Body Shots III\n\nTake a shot off your partner’s body.', rating: 1 },
         { id: 'drink-3', heading: 'Drink', text: 'Blink Challenge\n\nStare your partner into the eyes, whoever blinks, drinks.', rating: 2 },
         { id: 'drink-4', heading: 'Drink', text: 'Finish Line\n\nThe person who is closer to finish finishes their drink.' },
         { id: 'drink-5', heading: 'Drink', text: 'Partner\'s Sip\n\nDrink your partner\'s drink.' }
@@ -96,6 +98,7 @@ export const decks = {
         { id: 'fun-21', heading: 'Fun', text: 'Sensual Essence\n\nSpray your favourite perfume on your partner.', rating: 1 }
     ]
 };
+
 export const randomCards = [
     { id: 'random-1', heading: "Spicy Snapshot", text: "Take secretly a picture during sex of you and show it them later." },
     { id: 'random-2', heading: "Moan Trigger", text: "Everytime your partner moans during sex, keep their mouth shout with your lips and make them moan even harder." },
@@ -107,4 +110,5 @@ export const randomCards = [
     { id: 'random-8', heading: "Kiss On Command", text: "Every time your partner says kiss me, you must immediately kiss them." },
     { id: 'random-9', heading: "Double Trouble", text: "Your next card must be done twice." },
     { id: 'random-10', heading: "Magnetic Touch", text: "You have to stay in contact with your partner's genital at all times." },
+    { id: 'random-11', heading: "Dressover", text: "You decide how you want your Partner to be dressed." }
 ];
